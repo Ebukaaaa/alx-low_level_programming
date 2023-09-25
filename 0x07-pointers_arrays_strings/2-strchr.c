@@ -1,25 +1,25 @@
 #include "holberton.h"
 /**
- * _strchr - prints from the first occurrence of a char.
- * @s: source string
- * @c: tested char
+ * _strchr - function that locates a character in a string
+ *@s: first value -char
+ *@c: second value - char
  *
- * Return: new string.
+ * Return: char with result
  */
 char *_strchr(char *s, char c)
 {
-	while (*s != '\0')
+
+	if (*s == '\0')
+		return (s);
+	while (*s)
 	{
 		if (*s == c)
 		{
 			return (s);
-
 		}
-		else
-			s++;
+	       s++;
 	}
-	if (*s == c)
+	if (c == '\0')
 		return (s);
-	else
-		return (0);
+	return ('\0');
 }
